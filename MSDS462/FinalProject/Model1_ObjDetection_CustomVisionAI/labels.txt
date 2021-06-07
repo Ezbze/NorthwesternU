@@ -1,0 +1,4 @@
+Car
+Motorbike
+Person
+Pothole
