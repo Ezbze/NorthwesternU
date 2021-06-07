@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1720740-1"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("config", "UA-1720740-1", {"groups":"default","anonymize_ip":true,"allow_ad_personalization_signals":false});</script>
+<meta name="title" content="Autonomous Vehicles | GHSA" />
+<meta name="description" content="AVs have the potential for tremendous safety benefits, but until all vehicles on the road are autonomous, AVs will need to share the road safely with human drivers." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-05f704bfeff3f089cf5",applicationID:"598537074"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta http-equiv="ImageToolbar" content="false" />
+<link rel="shortcut icon" href="/sites/default/files/favicon_3.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://www.ghsa.org/issues/autonomous-vehicles" />
+<link rel="shortlink" href="https://www.ghsa.org/node/6611" />
+<link rel="revision" href="https://www.ghsa.org/issues/autonomous-vehicles" />
+
+    <title>Autonomous Vehicles | GHSA</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_GAs8V8OWPIYQft0jmcAcHVR5rMZ5LvgB96Nkv5dpuKk.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_2zrRgS6OYVl0DWY7tMLhYGaWrGz1YH3IfjWXR-tfE6g.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Nunito:300,400,700" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="lang-en section-issues ghsa-page-node-6611 path-node node--type-issues">
+
+  <!-- START: div#body_wrap1 -->
+  <div id="body_wrap1"><a href="#top" class="hidden">top</a><a href="#skip_to_main_content" class="hidden" accesskey="s">Skip to main article content</a>
+
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+<!-- START: header : contains logo, primary menu, secondary menu, search -->
+<header>
+
+
+  <!-- START: section.header_items -->
+  <section class="header_items row">
+
+    <div class="header_mobile_menu_toggle_container inner_column">
+      <div class="header_mobile_menu_toggle" id="js_header_mobile_menu_toggle">Mobile Menu Toggle</div>
+    </div>
+
+    <!-- START: div.header_logo -->
+    <div class="header_logo_container inner_column column_no_padding_both">
+      <a class="header_logo" href="https://www.ghsa.org/">
+        <div class="header_logo_bug">
+          <img src="/sites/default/files/logo-ghsa.png" alt="GHSA: Governors Highway Safety Association">
+          <!-- <div class="header_logo_bug"><img src="/themes/ghsa/images/logo-ghsa-1.png" alt="GHSA: Governors Highway Safety Association" /></div> -->
+        </div>
+        <div class="header_logo_logotype">
+          <div class="header_logo_logotype_organization">Governors Highway Safety Association</div>
+          <div class="header_logo_logotype_tagline">The States’ Voice on Highway Safety</div>
+        </div>
+      </a>
+    </div>
+    <!-- END: div.header_logo -->
+
+    <!-- START: div.header_primary_menu_container -->
+    <div id="js_header_primary_menu_container" class="header_primary_menu_container inner_column column_no_padding_both">
+
+      <nav class="header_primary_menu" id="js_primary_menu">
+
+                    <section id="block-ghsa-foundation-main-menu" data-block-plugin-id="system_menu_block:main" class="block-ghsa-foundation-main-menu small-10 small-offset-1 end column_no_padding_both columns">
+  
+              
+  <h2 class="block-title visually-hidden" id="block-ghsa-foundation-main-menu-menu">Main navigation</h2>
+  
+
+        
+
+                <ul class="menu">
+                    <li class="menu-item menu-item--expanded menu-item--active-trail">
+        <a href="/issues" data-drupal-link-system-path="node/916">Issues</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/issues/alcohol-impaired-driving" data-drupal-link-system-path="node/4891">Alcohol Impaired Driving</a>
+              </li>
+                <li class="menu-item menu-item--active-trail">
+        <a href="/issues/autonomous-vehicles" data-drupal-link-system-path="node/6611" class="is-active">Autonomous Vehicles</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/bicyclists-pedestrians" data-drupal-link-system-path="node/5706">Bicyclists and Pedestrians</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/child-passenger-safety" data-drupal-link-system-path="node/5686">Child Passenger Safety</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/distracted-driving" data-drupal-link-system-path="node/4696">Distracted Driving</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/drowsy-driving" data-drupal-link-system-path="node/5746">Drowsy Driving</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/drug-impaired-driving" data-drupal-link-system-path="node/4886">Drug Impaired Driving</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/mature-drivers" data-drupal-link-system-path="node/4911">Mature Drivers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/motorcycle-safety" data-drupal-link-system-path="node/4916">Motorcyclists</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/seat-belts" data-drupal-link-system-path="node/5671">Seat Belts</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/speed-and-red-light-cameras" data-drupal-link-system-path="node/4901">Speed and Red Light Cameras</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/speeding-aggressive" data-drupal-link-system-path="node/5681">Speeding and Aggressive Driving</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/teen-drivers" data-drupal-link-system-path="node/4896">Teen and Novice Drivers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/traffic-records" data-drupal-link-system-path="node/5691">Traffic Records</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/state-laws" data-drupal-link-system-path="node/586">State Laws</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/state-laws/issues" data-drupal-link-system-path="state-laws/issues">By Issue</a>
+              </li>
+                <li class="menu-item">
+        <a href="/state-laws/states" data-drupal-link-system-path="state-laws/states">By State</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/resources" data-drupal-link-system-path="node/3206">Resources</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/resources/publications" data-drupal-link-system-path="node/101">Publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/resources/state-highway-safety-showcases" data-drupal-link-system-path="node/4086">State Highway Safety Showcases</a>
+              </li>
+                <li class="menu-item">
+        <a href="/resources/shso-guidance" data-drupal-link-system-path="node/4906">SHSO Guidance</a>
+              </li>
+                <li class="menu-item">
+        <a href="/resources/law-enforcement" data-drupal-link-system-path="node/11001">Law Enforcement</a>
+              </li>
+                <li class="menu-item">
+        <a href="/resources/Traffic-Records" data-drupal-link-system-path="node/4061">Traffic Records Management</a>
+              </li>
+                <li class="menu-item">
+        <a href="/resources/NCREP">Research Program</a>
+              </li>
+                <li class="menu-item">
+        <a href="/resources/partner-initiatives" data-drupal-link-system-path="node/5711">Partner Initiatives</a>
+              </li>
+                <li class="menu-item">
+        <a href="/resources/safety-careers" data-drupal-link-system-path="node/8581">Highway Safety Careers</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/events" data-drupal-link-system-path="node/566">Events</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://www.ghsa.org/events/Annual-Meetings/2020">2020 Annual Meeting</a>
+              </li>
+                <li class="menu-item">
+        <a href="/events/Featured-Events">Upcoming Events</a>
+              </li>
+                <li class="menu-item">
+        <a href="/events/Past-Annual-Meetings" data-drupal-link-system-path="node/5541">Past Annual Meetings</a>
+              </li>
+                <li class="menu-item">
+        <a href="/events/Future-Annual-Meetings" data-drupal-link-system-path="node/7646">Future Annual Meetings</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/about" data-drupal-link-system-path="node/9">About</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/about/shsos" data-drupal-link-system-path="node/4026">State Members</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/associate-members" data-drupal-link-system-path="node/3996">Associate Members</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/join" data-drupal-link-system-path="node/4041">Join GHSA</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/news" data-drupal-link-system-path="node/4971">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/safety-awards" data-drupal-link-system-path="node/3161">Safety Awards</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/federal-grant-programs" data-drupal-link-system-path="node/6476">Federal Grant Programs</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/governance" data-drupal-link-system-path="node/5811">Governance</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/executive-board" data-drupal-link-system-path="node/6251">Executive Board</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/staff" data-drupal-link-system-path="node/4051">Our Team</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  
+  </section>
+
+
+        
+      </nav>
+
+
+    </div>
+    <!-- END: div.header_primary_menu_container -->
+        <!-- START: div.header_secondary_menu_container -->
+    <div class="header_secondary_menu_container inner_column column_no_padding_both">
+      <nav class="header_secondary_menu" id="js_secondary_menu">
+        <h2 class="hidden">Secondary Menu</h2>
+        <ul class="menu">
+          <li class="secondary_menu_member_login" title="Member Login"><a href="http://my.ghsa.org/">Member Login</a></li>
+          <li class="secondary_menu_partner_with_us" title="Partner with Us"><a href="/about/join">Partner with Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- END: div.header_secondary_menu_container -->
+
+        <!-- START: header_search_container -->
+    <div class="header_search_container inner_column column_no_padding_both">
+
+      <!-- START: header_search -->
+      <div class="header_search" id="js_search_desktop">
+        <h2 class="hidden">Search</h2>
+        <div class="search_toggle js_search_toggle" title="Search">Search toggle</div>
+        <div class="search_form_container js_search_container">
+          <div class="js_close">Close</div>
+            <div>
+    <section class="search-block-form block-ghsa-foundation-searchform" data-drupal-selector="search-block-form" id="block-ghsa-foundation-searchform" data-block-plugin-id="search_form_block" role="search">
+  
+  
+    
+
+  
+          <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="success button radius js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" />
+</div>
+
+</form>
+
+    
+    
+  </section>
+
+  </div>
+
+        </div>
+      </div>
+      <!-- END: header_search -->
+
+    </div>
+    <!-- END: header_search_container -->
+    
+  </section>
+  <!-- END: section.header_items -->
+
+
+  <!-- START: section.header_items_2 -->
+  <section class="header_items_2 row">
+
+    <div class="mobile_640_column_1 inner_column"><ul></ul></div>
+    <div class="mobile_640_column_2 inner_column"></div>
+    <div class="mobile_640_column_3 inner_column"><ul></ul></div>
+
+  </section>
+  <!-- END: section.header_items_2 -->
+
+
+  <!-- START: section.header_items_3 -->
+  <section class="header_items_3 row">
+
+    <div class="mobile_640_column_1 inner_column"></div>
+    <div class="mobile_640_column_2 inner_column"></div>
+    <div class="mobile_640_column_3 inner_column"></div>
+
+  </section>
+  <!-- END: section.header_items_2 -->
+
+
+</header>
+<!-- END: header -->
+
+
+
+
+
+
+
+
+<div class="row">
+      </div>
+
+
+<div class="l-help row">
+  <!--
+  <div class="large-12 columns">
+  -->
+  <div class="small-10 small-offset-1 end column_no_padding_both columns">
+
+  </div>
+</div>
+
+
+  <main id="main" role="main">
+    <div class="row">
+      <!--<div class="large-12 columns">-->
+      <div class="">
+          <div class="row">
+    <section id="block-ghsa-foundation-breadcrumbs" data-block-plugin-id="system_breadcrumb_block" class="block-ghsa-foundation-breadcrumbs small-10 small-offset-1 end column_no_padding_both columns">
+  
+  
+    
+
+  
+          
+
+<!-- START: section.main_breadcrumb_container -->
+<div class="main_breadcrumb_container container">
+	<div class="breadcrumb">
+  	  		<nav role="navigation" aria-labelledby="system-breadcrumb">
+  			<h2 class="visually-hidden">Breadcrumb</h2>
+  			<ul>
+    			    				<li>
+    					    						<a href="/issues">Issues</a>
+    					    				</li>
+    			    				<li>
+    					    						Autonomous Vehicles
+    					    				</li>
+    			  			</ul>
+  		</nav>
+  		</div>
+</div>
+<!-- END: section.main_breadcrumb_container -->
+
+    
+    
+  </section>
+<div data-drupal-messages-fallback class="hidden"></div>
+<section id="block-ghsa-foundation-page-title" data-block-plugin-id="page_title_block" class="block-ghsa-foundation-page-title small-10 small-offset-1 end column_no_padding_both columns">
+  
+  
+    
+
+  
+          
+  <h1>Autonomous Vehicles</h1>
+
+
+    
+    
+  </section>
+
+  </div>
+
+        <a id="main-content"></a>
+
+        <section>
+        <div>
+    <section id="block-ghsa-foundation-content" data-block-plugin-id="system_main_block" class="block-ghsa-foundation-content">
+  
+  
+    
+
+  
+          <article class="node node--type-issues node--view-mode-full clearfix">
+  
+    
+
+  <div>
+    <div class="container">
+
+  <div class="small-10 small-offset-1 end column_no_padding_both columns">
+    <div class="row issues-banner issues-row">
+      <div class="large-12 columns">
+        <div class="block-region-banner"><section data-block-plugin-id="entity_field:node:field_image">
+  
+  
+    
+
+  
+          <div class="field-wrapper image field field-node--field-image field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">  <img src="/sites/default/files/styles/eventslanding/public/Autonomous2.jpg?itok=U50G-E1q" width="1200" height="500" alt="Autonomous Vehicles" typeof="foaf:Image" />
+
+
+</div>
+      </div>
+</div>
+
+    
+    
+  </section>
+</div>
+      </div>
+    </div>
+
+    <div class="row issues-top">
+      <div class="medium-8 columns">
+        <div class="block-region-top-left"><section data-block-plugin-id="entity_field:node:body">
+  
+  
+    
+
+  
+          <div class="field-wrapper body field field-node--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>It is widely acknowledged that fully autonomous vehicles (AVs), or cars and trucks that can drive themselves without a human at the controls, are coming soon. In fact, Levels 1 and 2 AVs are already on our roads. Many companies are currently testing AVs, and AV programs have been launched across the country by various companies in the technology and transportation industries.</p>
+
+<p>AVs have the potential for tremendous safety benefits, but it will be decades until all vehicles on the road will be autonomous, and perhaps they never will. Until then, autonomous vehicles will need to share the road safely with human drivers.</p>
+
+<table align="right" border="1" cellpadding="2" cellspacing="1" style="width: 300px;"><tbody><tr><td class="text-align-center">
+			<h3>GHSA Policy</h3>
+
+			<p><a href="https://www.ghsa.org/sites/default/files/2018-09/policies18.pdf">Click here to view GHSA's Policy and Priorities on Autonomous Vehicles.</a></p>
+			</td>
+		</tr></tbody></table><p>Further, the public remains skeptical about the safety of autonomous vehicles. Surveys have shown that <strong>fewer</strong><strong> than 30% of people report that they would feel comfortable riding in a highly automated vehicle, and fewer than a quarter would buy one as soon as it became available.</strong></p>
+
+<p>This presents a challenge to states, which are responsible for public education, driver licensing, and establishing and enforcing traffic laws. GHSA believes that states should play a prominent role in dealing with the issues that will come from a mix of autonomous and human-driven vehicles on the roads.</p>
+
+<h3><em><a href="https://www.ghsa.org/resources/AV19">Automated Vehicle Safety Expert Panel: Engaging Drivers and Law Enforcement</a><a href="https://www.ghsa.org/resources/AV19" id="" rel="" target="" title=""><img alt="av cover" border="1" data-entity-type="file" data-entity-uuid="d3eef92d-1a91-4b8d-9f82-bd1ca741955a" height="186" src="/sites/default/files/inline-images/avwhitepapercover.JPG" style="padding-left: 10px; padding-top: 10px" width="141" class="align-right" /></a></em></h3>
+
+<p>On May 8, 2019, GHSA and State Farm<sup>®</sup> hosted an expert panel meeting in Washington, D.C., to discuss traffic safety education and law enforcement amid the advent of automated vehicle technology. This white paper summarizes the outcomes of that meeting and provides a number of recommendations for State Highway Safety Offices and the broader safety community. Former senior NHTSA official Dr. Jim Hedlund authored the paper.</p>
+
+<p>The white paper is available <a href="https://www.ghsa.org/resources/AV19">here</a>.</p>
+
+<h3>Autonomous Vehicle Policy</h3>
+
+<p>As both state and federal governments consider autonomous vehicle policy, GHSA is committed to ensuring that safety remains a priority and that states are given a voice in these discussions. Seventeen states and the District of Columbia have already enacted laws regarding AVs, and another six have executive orders addressing the technology.</p>
+
+<p>In July 2017, GHSA along with the National Governors Association (NGA), the National Conference of State Legislatures (NCSL), the American Association of State Highway and Transportation Officials (AASHTO) and the American Association of Motor Vehicle Administrators (AAMVA) sent a <a href="http://my.ghsa.org/Files/legreg/AVletter_072617.pdf" target="_blank">letter</a> to members of the U.S. House of Representatives, urging the federal government to work with states to craft AV policy.</p>
+
+<p><span class="button-container"><a class="button" href="http://my.ghsa.org/Files/legreg/AVletter_072617.pdf">View the Letter</a></span></p>
+</div>
+      </div>
+</div>
+
+    
+    
+  </section>
+</div>
+      </div>
+      <div class="medium-4 columns">
+        <div class="block-region-top-right"><section class="views-element-container" data-block-plugin-id="views_block:news-dynamic_filtered_news">
+  
+  
+      <h2  class="block-title">News tagged with Autonomous Vehicles</h2>
+    
+
+  
+          <div><div class="js-view-dom-id-68b8b33348d83610b183202283c4da6c96f560a8addcc48b65c396395449ff11 news ghsa-view-wrapper row">
+  
+  
+  
+
+      <viewheader class="small-12 columns">
+      <img src="/themes/ghsa_foundation/images/icon-news.png" alt="icon-news" /><h2>Related News</h2>
+    </viewheader>
+  
+  
+  
+
+      <div class="views-row"><div class="views-field views-field-title"><h3 class="field-content"><a href="/resources/AVwhitepaper2019" hreflang="en">New Report: Expert Panel Agrees There is Much to Be Done to Keep Drivers Safe in the Automated Vehicle Age</a></h3></div><div class="views-field views-field-created"><span class="field-content">August 1, 2019</span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><h3 class="field-content"><a href="/resources/news-releases/PAVE19" hreflang="en">GHSA Joins PAVE Coalition to Increase Driver Knowledge about Automated Vehicle Safety</a></h3></div><div class="views-field views-field-created"><span class="field-content">July 9, 2019</span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><h3 class="field-content"><a href="/resources/news-releases/av-panel19" hreflang="en">Traffic Safety Recommendations for Automated Vehicles Being Developed</a></h3></div><div class="views-field views-field-created"><span class="field-content">April 29, 2019</span></div></div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+    
+    
+  </section>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row_stripe_grey float-left">
+    <div class="small-10 small-offset-1 end column_no_padding_both columns">
+      <div class="row issues-middle  issues-row">
+        <div class="medium-8 columns">
+          <div class="block-region-middle-left"><section class="views-element-container" data-block-plugin-id="views_block:featured_initiative-featured_initiative">
+  
+  
+    
+
+  
+          <div><div class="js-view-dom-id-fb5dbe791dbf48aae15ebf7b151114dc9a33e1a55c5b6c35bf367869205e0f37 featured-initiative ghsa-view-wrapper row">
+  
+  
+  
+
+  
+  
+  
+
+  
+  <h2>Featured Initiative</h2>
+<p>Currently, there is no featured initiative on this issue.<br />All State Highway Safety Showcases can be viewed <a href="/resources-0">here</a>.</p>
+
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+    
+    
+  </section>
+</div>
+        </div>
+        <div class="medium-4 columns">
+          <div class="block-region-middle-right"><section class="views-element-container" data-block-plugin-id="views_block:resources-dynamic_filtered_resources">
+  
+  
+    
+
+  
+          <div><div class="js-view-dom-id-4afd9ff733d30150da79b4a125aa9d5bb31458e1da3094611d478d49c579a689 resources ghsa-view-wrapper row">
+  
+  
+  
+
+      <viewheader class="small-12 columns">
+      <img src="/themes/ghsa_foundation/images/icon-news.png" alt="icon-initiative" /><h2>Publications</h2>
+    </viewheader>
+  
+  
+  
+
+      <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/resources/AnnualReport19" hreflang="en">Highlights of Association Activity, FY 2019</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/resources/AV19" hreflang="en">Automated Vehicle Safety Expert Panel: Engaging Drivers and Law Enforcement</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/index.php/resources/AnnualReport18" hreflang="en">Highlights of Association Activity, FY 2018</a></span></div></div>
+
+  
+  
+
+  
+  
+
+      <viewfooter class="small-12 columns">
+      <p><a class="button" href="/resources/publications?issues=521">View All Publications</a></p>
+
+    </viewfooter>
+  
+  
+</div>
+</div>
+
+    
+    
+  </section>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="small-10 small-offset-1 end column_no_padding_both columns">
+    <div class="row issues-bottom issues-row">
+      <div class="medium-4 columns">
+        <div class="block-region-bottom-left"></div>
+      </div>
+      <div class="medium-4 columns">
+        <div class="block-region-bottom-center"><section class="views-element-container" data-block-plugin-id="views_block:issues-laws_block">
+  
+  
+    
+
+  
+          <div><div class="js-view-dom-id-05ca2230ea73998632e8e93cf94c346cb295becfd2aac6e9b6a2bd871874d30f issues ghsa-view-wrapper row">
+  
+  
+  
+
+      <viewheader class="small-12 columns">
+      <img src="/themes/ghsa_foundation/images/icon-laws.png" alt="icon-news" /><h2>Laws</h2>
+    </viewheader>
+  
+  
+  
+
+      <div class="views-row"><div class="views-field views-field-field-short-term-description"><div class="field-content">There are currently 37 states along with the District of Columbia that have enacted legislation or issues executive orders regarding Autonomous Vehicles (AVs).</div></div></div>
+
+  
+  
+
+  
+  
+
+      <viewfooter class="small-12 columns">
+      <p><a class="button" href="/state-laws/issues/autonomous vehicles">See All Related</a></p>
+
+    </viewfooter>
+  
+  
+</div>
+</div>
+
+    
+    
+  </section>
+</div>
+      </div>
+      <div class="medium-4 columns">
+        <div class="block-region-bottom-right"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</article>
+
+    
+    
+  </section>
+
+  </div>
+
+    </section>
+      </div>
+    </div>
+  </main>
+
+<!-- START: footer : contains footer elements -->
+<footer>
+
+      <!-- START: section.footer_contact_information -->
+    <section class="footer_contact_information">
+
+      <!-- START: .row -->
+      <div class="row footer_contact_information_data">
+
+        <!-- START: columns -->
+        <div class="columns small-10 small-offset-1 end column_no_padding_both">
+
+          <div class="inner_column region_contact_block_title">
+                            <div>
+    <section id="block-ghsa-foundation-footercontacttitle" data-block-plugin-id="block_content:cb6d06bd-ed4e-4f00-b33d-bc2866f084b7" class="block-ghsa-foundation-footercontacttitle">
+  
+  
+    
+
+  
+          <div class="field-wrapper body field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><h2>Contact Us</h2>
+</div>
+      </div>
+</div>
+
+    
+    
+  </section>
+
+  </div>
+
+                      </div>
+          <div class="inner_column">
+                            <div>
+    <section id="block-ghsa-foundation-footeraddress" data-block-plugin-id="block_content:33fc5795-4751-4ecc-8b28-8b86eb9a8762" class="block-ghsa-foundation-footeraddress">
+  
+  
+    
+
+  
+          <div class="field-wrapper body field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>660 N. Capitol Street NW, Suite 220<br />
+Washington, DC 20001­-1642</p>
+<p><a href="https://www.ghsa.org/about/HQ-Directions">Directions &amp; Visitor Information</a></p>
+</div>
+      </div>
+</div>
+
+    
+    
+  </section>
+
+  </div>
+
+                      </div>
+          <div class="inner_column">
+                            <div>
+    <section id="block-ghsa-foundation-footeremail" data-block-plugin-id="block_content:c7ec5bf2-191e-45e5-b80e-d782190d1dcf" class="block-ghsa-foundation-footeremail">
+  
+  
+    
+
+  
+          <div class="field-wrapper body field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p><a href="mailto:headquarters@ghsa.org">headquarters@ghsa.org</a></p>
+</div>
+      </div>
+</div>
+
+    
+    
+  </section>
+<section id="block-ghsa-foundation-footerphone" data-block-plugin-id="block_content:0e384622-afb9-4367-bd3f-c0d825dd6697" class="block-ghsa-foundation-footerphone">
+  
+  
+    
+
+  
+          <div class="field-wrapper body field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>202-789-0942</p>
+</div>
+      </div>
+</div>
+
+    
+    
+  </section>
+
+  </div>
+
+                      </div>
+          <div class="inner_column">
+                            <div>
+    <section id="block-ghsa-foundation-footersubscribe" data-block-plugin-id="block_content:bc90ca3f-0df6-4ba1-9e13-2a1cda4a68c8" class="block-ghsa-foundation-footersubscribe">
+  
+  
+    
+
+  
+          <div class="field-wrapper body field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p><a class="bi-button" href="https://visitor.constantcontact.com/manage/optin?v=001x9-V8yQgJyGzA4PS7s6lq5VAEk21VSwDui9016yWsjJl0bbBygVCwYabMvem4z1ZByqAgJsijUU%3D; target=blank">Sign up for GHSA news</a><br /><a href="http://facebook.com/ghsahq" id="" rel="" target="" title="Like Us on Facebook!"><img alt="Facebook Icon" data-entity-type="file" data-entity-uuid="561b1676-6c77-4c28-82d0-a595195a6d4e" src="/sites/default/files/inline-images/Final_FacebookIcon.png" /></a><a href="http://twitter.com/ghsahq" title="Follow Us on Twitter!"><img alt="Twitter icon" data-entity-type="file" data-entity-uuid="62eba601-705f-4961-954e-5c9a4db674dd" src="/sites/default/files/inline-images/Final_TwitterIcon.png" /></a> <a href="https://www.linkedin.com/company/governors-highway-safety-association/" title="Connect With Us on LinkedIn!"><img alt="LinkedIn icon" data-entity-type="" data-entity-uuid="" height="35" src="/sites/default/files/linkedin-footer-6_1.png" width="35" /></a> </p>
+</div>
+      </div>
+</div>
+
+    
+    
+  </section>
+
+  </div>
+
+                      </div>
+
+        </div>
+        <!-- END: columns -->
+
+      </div>
+      <!-- END: .row -->
+
+    </section>
+    <!-- END: section.footer_contact_information -->
+  
+  <!-- START: section.footer_primary_menu_container -->
+  <section class="footer_primary_menu_container row">
+
+    <!-- START: div.footer_primary_menu -->
+                <section id="block-ghsa-foundation-footer-main" data-block-plugin-id="menu_block:main" class="block-ghsa-foundation-footer-main">
+  
+
+    <nav class="footer_primary_menu columns small-10 small-offset-1 end column_no_padding_both" id="js_footer_primary_menu">
+                  
+    
+    <h2 class="block-title visually-hidden" id="block-ghsa-foundation-footer-main-menu">Footer Main Menu Reiteration</h2>
+    
+
+              
+							<ul class="menu">
+										<li>
+				<a href="/issues" data-drupal-link-system-path="node/916">Issues</a>
+																<ul>
+										<li>
+				<a href="/issues/alcohol-impaired-driving" data-drupal-link-system-path="node/4891">Alcohol Impaired Driving</a>
+							</li>
+								<li>
+				<a href="/issues/autonomous-vehicles" data-drupal-link-system-path="node/6611" class="is-active">Autonomous Vehicles</a>
+							</li>
+								<li>
+				<a href="/issues/bicyclists-pedestrians" data-drupal-link-system-path="node/5706">Bicyclists and Pedestrians</a>
+							</li>
+								<li>
+				<a href="/issues/child-passenger-safety" data-drupal-link-system-path="node/5686">Child Passenger Safety</a>
+							</li>
+								<li>
+				<a href="/issues/distracted-driving" data-drupal-link-system-path="node/4696">Distracted Driving</a>
+							</li>
+								<li>
+				<a href="/issues/drowsy-driving" data-drupal-link-system-path="node/5746">Drowsy Driving</a>
+							</li>
+								<li>
+				<a href="/issues/drug-impaired-driving" data-drupal-link-system-path="node/4886">Drug Impaired Driving</a>
+							</li>
+								<li>
+				<a href="/issues/mature-drivers" data-drupal-link-system-path="node/4911">Mature Drivers</a>
+							</li>
+								<li>
+				<a href="/issues/motorcycle-safety" data-drupal-link-system-path="node/4916">Motorcyclists</a>
+							</li>
+								<li>
+				<a href="/issues/seat-belts" data-drupal-link-system-path="node/5671">Seat Belts</a>
+							</li>
+								<li>
+				<a href="/issues/speed-and-red-light-cameras" data-drupal-link-system-path="node/4901">Speed and Red Light Cameras</a>
+							</li>
+								<li>
+				<a href="/issues/speeding-aggressive" data-drupal-link-system-path="node/5681">Speeding and Aggressive Driving</a>
+							</li>
+								<li>
+				<a href="/issues/teen-drivers" data-drupal-link-system-path="node/4896">Teen and Novice Drivers</a>
+							</li>
+								<li>
+				<a href="/issues/traffic-records" data-drupal-link-system-path="node/5691">Traffic Records</a>
+							</li>
+				</ul>
+	
+							</li>
+								<li>
+				<a href="/state-laws" data-drupal-link-system-path="node/586">State Laws</a>
+																<ul>
+										<li>
+				<a href="/state-laws/issues" data-drupal-link-system-path="state-laws/issues">By Issue</a>
+							</li>
+								<li>
+				<a href="/state-laws/states" data-drupal-link-system-path="state-laws/states">By State</a>
+							</li>
+				</ul>
+	
+							</li>
+								<li>
+				<a href="/resources" data-drupal-link-system-path="node/3206">Resources</a>
+																<ul>
+										<li>
+				<a href="/resources/publications" data-drupal-link-system-path="node/101">Publications</a>
+							</li>
+								<li>
+				<a href="/resources/state-highway-safety-showcases" data-drupal-link-system-path="node/4086">State Highway Safety Showcases</a>
+							</li>
+								<li>
+				<a href="/resources/shso-guidance" data-drupal-link-system-path="node/4906">SHSO Guidance</a>
+							</li>
+								<li>
+				<a href="/resources/law-enforcement" data-drupal-link-system-path="node/11001">Law Enforcement</a>
+							</li>
+								<li>
+				<a href="/resources/Traffic-Records" data-drupal-link-system-path="node/4061">Traffic Records Management</a>
+							</li>
+								<li>
+				<a href="/resources/NCREP">Research Program</a>
+							</li>
+								<li>
+				<a href="/resources/partner-initiatives" data-drupal-link-system-path="node/5711">Partner Initiatives</a>
+							</li>
+								<li>
+				<a href="/resources/safety-careers" data-drupal-link-system-path="node/8581">Highway Safety Careers</a>
+							</li>
+				</ul>
+	
+							</li>
+								<li>
+				<a href="/events" data-drupal-link-system-path="node/566">Events</a>
+																<ul>
+										<li>
+				<a href="https://www.ghsa.org/events/Annual-Meetings/2020">2020 Annual Meeting</a>
+							</li>
+								<li>
+				<a href="/events/Featured-Events">Upcoming Events</a>
+							</li>
+								<li>
+				<a href="/events/Past-Annual-Meetings" data-drupal-link-system-path="node/5541">Past Annual Meetings</a>
+							</li>
+								<li>
+				<a href="/events/Future-Annual-Meetings" data-drupal-link-system-path="node/7646">Future Annual Meetings</a>
+							</li>
+				</ul>
+	
+							</li>
+								<li>
+				<a href="/about" data-drupal-link-system-path="node/9">About</a>
+																<ul>
+										<li>
+				<a href="/about/shsos" data-drupal-link-system-path="node/4026">State Members</a>
+							</li>
+								<li>
+				<a href="/about/associate-members" data-drupal-link-system-path="node/3996">Associate Members</a>
+							</li>
+								<li>
+				<a href="/about/join" data-drupal-link-system-path="node/4041">Join GHSA</a>
+							</li>
+								<li>
+				<a href="/about/news" data-drupal-link-system-path="node/4971">News</a>
+							</li>
+								<li>
+				<a href="/about/safety-awards" data-drupal-link-system-path="node/3161">Safety Awards</a>
+							</li>
+								<li>
+				<a href="/about/federal-grant-programs" data-drupal-link-system-path="node/6476">Federal Grant Programs</a>
+							</li>
+								<li>
+				<a href="/about/governance" data-drupal-link-system-path="node/5811">Governance</a>
+							</li>
+								<li>
+				<a href="/about/executive-board" data-drupal-link-system-path="node/6251">Executive Board</a>
+							</li>
+								<li>
+				<a href="/about/staff" data-drupal-link-system-path="node/4051">Our Team</a>
+							</li>
+				</ul>
+	
+							</li>
+				</ul>
+	
+
+
+      </nav>
+
+  </section>
+
+
+          <!-- END: div.footer_primary_menu -->
+
+  </section>
+  <!-- END: section.footer_primary_menu_container -->
+
+  <!-- START: section.footer_copyright -->
+  <section class="footer_copyright row">
+
+    <div class="columns small-10 small-offset-1 end column_no_padding_both">
+                <div>
+    <section id="block-ghsa-foundation-copyright-2" data-block-plugin-id="block_content:b4b033d3-e243-4667-92c6-17987d5f25db" class="block-ghsa-foundation-copyright-2">
+  
+  
+    
+
+  
+          <div class="field-wrapper body field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>©2020 Governors Highway Safety Association</p>
+</div>
+      </div>
+</div>
+
+    
+    
+  </section>
+
+  </div>
+
+          </div>
+
+  </section>
+  <!-- END: section.footer_copyright -->
+</footer>
+
+  </div>
+
+    
+
+  </div>
+  <!-- END: div#body_wrap1 -->
+
+  <div id="js_yardstick"></div>
+
+  <div id="js_mobile_menu" class="mobile_menu">
+    <div class="mobile_menu_inner">
+      <div class="mobile_menu_header">
+        <div class="js_close">Close</div>
+        <h2>Menu</h2>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/6611","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"balance_helper\/SearchForm,core\/html5shiv,extlink\/drupal.extlink,ghsa_foundation\/fonts,ghsa_foundation\/global,google_analytics\/google_analytics,search_kint\/search_kint,system\/base,views\/views.ajax,views\/views.module,zurb_foundation\/global","theme":"ghsa_foundation","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"google_analytics":{"account":"UA-1720740-1","trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":null}},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:fb5dbe791dbf48aae15ebf7b151114dc9a33e1a55c5b6c35bf367869205e0f37":{"view_name":"featured_initiative","view_display_id":"featured_initiative","view_args":"521","view_path":"\/node\/6611","view_base_path":null,"view_dom_id":"fb5dbe791dbf48aae15ebf7b151114dc9a33e1a55c5b6c35bf367869205e0f37","pager_element":0},"views_dom_id:68b8b33348d83610b183202283c4da6c96f560a8addcc48b65c396395449ff11":{"view_name":"news","view_display_id":"dynamic_filtered_news","view_args":"521","view_path":"\/node\/6611","view_base_path":null,"view_dom_id":"68b8b33348d83610b183202283c4da6c96f560a8addcc48b65c396395449ff11","pager_element":0}}},"ajax":[],"user":{"uid":0,"permissionsHash":"bddfad160a02903abb2721bad4979e4bd05215884c2d2a30faef3e2ad4b5b9ed"}}</script>
+<script src="/sites/default/files/js/js_3x8oYoOFJ5JDm9SFvIHsGnySrr46FPCOBERvOBIBLsU.js"></script>
+
+  <script>
+    (function ($) {
+      $(document).foundation();
+    })(jQuery);
+  </script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-05f704bfeff3f089cf5","applicationID":"598537074","transactionName":"YFRSZRdUCBFQAkJeXFkecVIRXAkMHhFXUFZoUlFSDVA=","queueTime":0,"applicationTime":11,"atts":"TBNRE19OGx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
