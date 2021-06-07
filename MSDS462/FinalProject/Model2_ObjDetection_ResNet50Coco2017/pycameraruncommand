@@ -1,0 +1,6 @@
+https://github.com/tensorflow/examples/tree/3732c644f0f3841225726f755bd79514d2ca69fa/lite/examples/object_detection/raspberry_pi
+https://keras.io/examples/vision/retinanet/
+
+
+
+python3 detect_objects.py
